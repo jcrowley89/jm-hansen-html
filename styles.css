@@ -24,11 +24,17 @@ body {
   font-family: var(--serif-text);
   color: var(--rich-black);
   background: url("./img/mainbg.jpg");
-  /* background-attachment: fixed; */
   background-size: auto 100vh;
-  /* background-size: contain;*/
   background-repeat: no-repeat;
   background-position: 20% 0;
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center;
+  }
 }
 
 section {
@@ -277,6 +283,13 @@ textarea {
   /* padding: 3rem; */
 }
 
+@media screen and (min-width: 600px) {
+  #shop {
+    padding: 3rem;
+    background-color: rgba(0,0,0,0);
+  }
+}
+
 #shopItemsContainer {
   background-color: var(--trans-white-04);
   padding: 2rem;
@@ -322,7 +335,7 @@ img#map {
   width: 100%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1300px) {
   #contact div.container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -344,4 +357,8 @@ img#map {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.shadow {
+  box-shadow:8px 8px 8px rgba(0, 0, 0, 0.2);
 }
